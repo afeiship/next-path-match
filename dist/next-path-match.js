@@ -2,7 +2,7 @@
  * name: @feizheng/next-path-match
  * url: https://github.com/afeiship/next-path-match
  * version: 1.0.0
- * date: 2019-12-03T10:22:59.868Z
+ * date: 2019-12-03T10:30:55.762Z
  * license: MIT
  */
 
@@ -13,8 +13,9 @@
   var cache = {};
 
   nx.pathMatch = function(inRoute, inPath) {
+    var pathname = inPath || global.location.pathname;
     var matcher = (cache[inRoute] = cache[inRoute] || pathToRegexp.match(inRoute));
-    const matched = matcher(inPath);
+    const matched = matcher(pathname);
     return matched ? matched.params : null;
   };
 

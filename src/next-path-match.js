@@ -5,8 +5,9 @@
   var cache = {};
 
   nx.pathMatch = function(inRoute, inPath) {
+    var pathname = inPath || global.location.pathname;
     var matcher = (cache[inRoute] = cache[inRoute] || pathToRegexp.match(inRoute));
-    const matched = matcher(inPath);
+    const matched = matcher(pathname);
     return matched ? matched.params : null;
   };
 
