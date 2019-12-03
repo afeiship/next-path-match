@@ -21,3 +21,6 @@ const res = nx.pathMatch(
   id:'13'
 }
 ```
+
+## resources
+- https://github.com/pillarjs/path-to-regexp
