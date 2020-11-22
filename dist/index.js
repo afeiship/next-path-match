@@ -3,7 +3,7 @@
  * description: A wrapper for path-to-regexp.
  * homepage: https://github.com/afeiship/next-path-match
  * version: 1.0.0
- * date: 2020-11-22 20:06:29
+ * date: 2020-11-22 20:16:37
  * license: MIT
  */
 
