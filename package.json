@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-path-match",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A wrapper for path-to-regexp.",
   "homepage": "https://github.com/afeiship/next-path-match",
   "author": {
