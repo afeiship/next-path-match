@@ -27,6 +27,12 @@ const res = nx.pathMatch(
 }
 ```
 
+## options
+| name         | default        | description                    |
+| ------------ | -------------- | ------------------------------ |
+| replacements | [['?', '\\?']] | Replace for pre process route. |
+| completion   | both           | Will completion route.         |
+
 ## resources
 - https://github.com/pillarjs/path-to-regexp
 
