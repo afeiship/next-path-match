@@ -20,12 +20,13 @@
       expect(res).toBeNull();
     });
 
-    test.only('star and ? path example with default completions', () => {
+    test('star and ? path example with default completions', () => {
       var route = '/content/course?businessConfigUuid=(.*)&bizType=independent';
       console.log(route);
       var res = nx.pathMatch(
         route,
-        'http://localhost:3000/content/course?businessConfigUuid=train-ear&bizType=independent&course=3e58d4456cea3b325b555f0333cf4e17&contentSelectedKey=d0364cbf879b24f5c98a700b460039cb&subject=english'
+        'http://localhost:3000/content/course?businessConfigUuid=train-ear&bizType=independent&course=3e58d4456cea3b325b555f0333cf4e17&contentSelectedKey=d0364cbf879b24f5c98a700b460039cb&subject=english',
+        { completion: 'both' }
       );
       expect(res[1]).toBe('train-ear');
     });

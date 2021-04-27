@@ -2,7 +2,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var pathToRegexp = require('path-to-regexp');
-  var defaults = { replacements: [['?', '\\?']], completion: 'both' };
+  var defaults = { replacements: [['?', '\\?']], completion: 'none' };
   var cache = {};
   var COMPLETION_MAP = {
     left: ['(.*)', ''],
