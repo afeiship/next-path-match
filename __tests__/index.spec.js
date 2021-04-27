@@ -19,5 +19,13 @@
       var res = nx.pathMatch('/dashboard/self-analysis/:type/:id', '/dashboard/self-ana/folder/13');
       expect(res).toBeNull();
     });
+
+    test("star and ? path example", ()=>{
+      var res = nx.pathMatch(
+        '/content/course\\?businessConfigUuid=:uuid&bizType=independent(.*)',
+        '/content/course?businessConfigUuid=train-ear&bizType=independent&course=3e58d4456cea3b325b555f0333cf4e17&contentSelectedKey=d0364cbf879b24f5c98a700b460039cb&subject=english'
+      );
+      expect(res.uuid).toBe('train-ear');
+    })
   });
 })();
